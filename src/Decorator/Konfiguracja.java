@@ -6,7 +6,7 @@ public class Konfiguracja {
         this.komponent = komponent;
     }
 
-    public void dekorujPotwierdzenie(Dekoratory dekorator){
+    void dekorujPotwierdzenie(Dekoratory dekorator){
         switch (dekorator){
             case NAGLOWEK1:
                 this.komponent = new DekoratorNaglowka1(this.komponent);
