@@ -1,6 +1,5 @@
 package AbstractFactory;
 
-public class SterownikEkranu {
-    public void rysuj(){
-    }
+public interface SterownikEkranu {
+    void rysuj();
 }

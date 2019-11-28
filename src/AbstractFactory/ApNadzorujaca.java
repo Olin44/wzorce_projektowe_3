@@ -14,4 +14,8 @@ public class ApNadzorujaca {
     public void rysuj(){
         fabrykaSter.pobierzSterEkm().rysuj();
     }
+
+    public void setFabrykaSter(Konfiguracja konfiguracja) throws Exception {
+        this.fabrykaSter = konfiguracja.getFabryka();
+    }
 }
