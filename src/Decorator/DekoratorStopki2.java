@@ -1,17 +1,20 @@
 package Decorator;
 
-public class DekoratorStopki2 extends DekoratorPotwierdzenie{
-    public DekoratorStopki2(Komponent komponent) {
-        super(komponent);
-    }
+import Decorator.reflect.ComponentType;
 
-    @Override
-    public void drukuj() {
-        super.drukuj();
-        drkStopka();
-    }
+@ComponentType("STOPKA2")
+public class DekoratorStopki2 extends DekoratorPotwierdzenie {
+	public DekoratorStopki2(Komponent komponent) {
+		super(komponent);
+	}
 
-    public void drkStopka(){
-        System.out.println("Stopka 2");
-    }
+	@Override
+	public void drukuj() {
+		super.drukuj();
+		drkStopka();
+	}
+
+	public void drkStopka() {
+		System.out.println("Stopka 2");
+	}
 }

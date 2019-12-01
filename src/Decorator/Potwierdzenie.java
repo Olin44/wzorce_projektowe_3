@@ -1,5 +1,8 @@
 package Decorator;
 
+import Decorator.reflect.ComponentType;
+
+@ComponentType("POTWIERDZENIE")
 public class Potwierdzenie implements Komponent {
 
     @Override

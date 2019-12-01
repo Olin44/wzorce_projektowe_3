@@ -1,21 +1,24 @@
 package Decorator;
 
-import java.util.Arrays;
-import java.util.Collections;
 
 
 public class Decorator {
     public static void main(String[] args) {
         Zamowienie zamowienie = new Zamowienie();
 
-        Komponent komponent = zamowienie.generujPotwierdzenie(
-                new DekoratorNaglowka1(new DekoratorStopki1(new DekoratorStopki2(new Potwierdzenie()))));
+        // A
+        zamowienie.generujPotwierdzenie("NAGLOWEK1", "STOPKA2", "STOPKA1");
+		System.out.println(" ____ ");
+        zamowienie.generujPotwierdzenie("NAGLOWEK1", "NAGLOWEK2", "STOPKA2");
 
-        Komponent komponent1 = zamowienie.generujPotwierdzenie(
-                new DekoratorNaglowka1(new DekoratorNaglowka2(new DekoratorStopki2(new DekoratorStopki2(new Potwierdzenie())))));
+		System.out.println(" ====================================== ");
 
-        Komponent komponent2 = zamowienie.generujPotwierdzenie(new Potwierdzenie());
+		// B
+		new DekoratorNaglowka1(new DekoratorStopki2(new DekoratorStopki1(new Potwierdzenie()))).drukuj();
+		System.out.println(" ____ ");
+		new DekoratorNaglowka1(new DekoratorNaglowka2(new DekoratorStopki2(new Potwierdzenie()))).drukuj();
 
-        zamowienie.drukuj(Arrays.asList(komponent, komponent1, komponent2));
+
+		// A == B
     }
 }

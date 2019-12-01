@@ -1,5 +1,5 @@
 package Decorator;
 
-interface Komponent {
+public interface Komponent {
     void drukuj();
 }

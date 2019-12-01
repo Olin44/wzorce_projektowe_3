@@ -1,6 +1,6 @@
 package Decorator;
 
-public abstract class DekoratorPotwierdzenie implements Komponent {
+public class DekoratorPotwierdzenie implements Komponent {
     private Komponent komponent;
 
     public DekoratorPotwierdzenie(Komponent komponent) {
@@ -8,6 +8,7 @@ public abstract class DekoratorPotwierdzenie implements Komponent {
     }
 
     public void drukuj(){
-        komponent.drukuj();
+    	if (komponent != null)
+			komponent.drukuj();
     }
 }

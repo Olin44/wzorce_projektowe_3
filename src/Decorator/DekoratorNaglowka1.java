@@ -1,17 +1,20 @@
 package Decorator;
 
-public class DekoratorNaglowka1 extends DekoratorPotwierdzenie{
-    public DekoratorNaglowka1(Komponent komponent) {
-        super(komponent);
-    }
+import Decorator.reflect.ComponentType;
 
-    @Override
-    public void drukuj() {
-        drkNaglowka();
-        super.drukuj();
-    }
+@ComponentType("NAGLOWEK1")
+public class DekoratorNaglowka1 extends DekoratorPotwierdzenie {
+	public DekoratorNaglowka1(Komponent komponent) {
+		super(komponent);
+	}
 
-    public void drkNaglowka(){
-        System.out.println("Naglowek 1");
-    }
+	@Override
+	public void drukuj() {
+		drkNaglowka();
+		super.drukuj();
+	}
+
+	public void drkNaglowka() {
+		System.out.println("Naglowek 1");
+	}
 }

@@ -1,15 +1,28 @@
 package Decorator;
 
+import Decorator.reflect.ComponentFactory;
+import Decorator.reflect.IComponentFactory;
+
+@SuppressWarnings("unchecked")
 public class Konfiguracja {
-    Komponent komponent;
 
-    public Konfiguracja() {}
+	private final IComponentFactory factory;
 
-    void dekorujPotwierdzenie(Komponent komponent){
-        this.komponent = komponent;
-        }
+    public Konfiguracja() {
+		factory = new ComponentFactory();
+		factory.register(
+				DekoratorNaglowka1.class,
+				DekoratorNaglowka2.class,
+				DekoratorStopki1.class,
+				DekoratorStopki2.class,
+				Potwierdzenie.class
+		);
+	}
 
-    public Komponent pobierzPotwierdzenie(){
-        return this.komponent;
+    public Komponent pobierzPotwierdzenie(String ... decorators){
+		Komponent last = new Potwierdzenie();
+		for (int i = decorators.length - 1; i >= 0; i--)
+			last = factory.create(decorators[i], last);
+    	return last;
     }
 }
