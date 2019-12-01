@@ -3,13 +3,10 @@ package Decorator;
 import java.util.List;
 
 class Zamowienie {
-    Komponent generujPotwierdzenie(List<Dekoratory> listaDekoratorow) {
-        Konfiguracja konfiguracja = new Konfiguracja(new Potwierdzenie());
-        for(Dekoratory dekorator : listaDekoratorow){
-            konfiguracja.dekorujPotwierdzenie(dekorator);
-        }
-        Komponent komponent = konfiguracja.pobierzPotwierdzenie();
-        return komponent;
+    Komponent generujPotwierdzenie(Komponent komponent) {
+        Konfiguracja konfiguracja = new Konfiguracja();
+        konfiguracja.dekorujPotwierdzenie(komponent);
+        return konfiguracja.pobierzPotwierdzenie();
     }
 
     public void drukuj(List<Komponent> komponenty){

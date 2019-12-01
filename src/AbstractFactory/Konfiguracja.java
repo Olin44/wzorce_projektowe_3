@@ -1,7 +1,7 @@
 package AbstractFactory;
 
 public class Konfiguracja {
-    String nazwa;
+    private String nazwa;
     public Konfiguracja(String nazwa) {
         this.nazwa = nazwa;
     }

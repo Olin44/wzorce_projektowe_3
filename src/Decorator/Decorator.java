@@ -9,12 +9,12 @@ public class Decorator {
         Zamowienie zamowienie = new Zamowienie();
 
         Komponent komponent = zamowienie.generujPotwierdzenie(
-                Arrays.asList(Dekoratory.NAGLOWEK1, Dekoratory.STOPKA1, Dekoratory.STOPKA2));
+                new DekoratorNaglowka1(new DekoratorStopki1(new DekoratorStopki2(new Potwierdzenie()))));
 
         Komponent komponent1 = zamowienie.generujPotwierdzenie(
-                Arrays.asList(Dekoratory.NAGLOWEK1, Dekoratory.NAGLOWEK2,Dekoratory.STOPKA2));
+                new DekoratorNaglowka1(new DekoratorNaglowka2(new DekoratorStopki2(new DekoratorStopki2(new Potwierdzenie())))));
 
-        Komponent komponent2 = zamowienie.generujPotwierdzenie(Collections.emptyList());
+        Komponent komponent2 = zamowienie.generujPotwierdzenie(new Potwierdzenie());
 
         zamowienie.drukuj(Arrays.asList(komponent, komponent1, komponent2));
     }
