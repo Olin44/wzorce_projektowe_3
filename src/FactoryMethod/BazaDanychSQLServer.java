@@ -2,8 +2,8 @@ package FactoryMethod;
 
 public class BazaDanychSQLServer implements BazaDanych {
     @Override
-    public void wykonajSelect() {
-        System.out.println("Wykonuję select do BazaDanychSQLServer");
+    public void wykonajSelect(String string) {
+        System.out.println("Wykonuję zapytanie " + string + " do BazaDanychSQLServer");
 
     }
 }

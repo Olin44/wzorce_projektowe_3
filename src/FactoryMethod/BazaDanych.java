@@ -1,5 +1,5 @@
 package FactoryMethod;
 
 public interface BazaDanych {
-    void wykonajSelect();
+    void wykonajSelect(String string);
 }

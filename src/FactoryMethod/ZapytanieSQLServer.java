@@ -10,4 +10,9 @@ public class ZapytanieSQLServer extends SzablonZapytania{
     protected String formatujSelect(String specZapyt) {
         return specZapyt;
     }
+
+    @Override
+    protected BazaDanych utworzDB() {
+        return new BazaDanychSQLServer();
+    }
 }

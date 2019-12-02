@@ -6,18 +6,14 @@ public abstract class SzablonZapytania {
         BazaDanych BD = utworzDB();
         System.out.println(formatujConnect(nazwaDB));
         komendaDB = formatujSelect(specZapyt);
+        BD.wykonajSelect(komendaDB);
         return komendaDB;
     }
 
     protected abstract String formatujConnect(String nazwaDB);
     protected abstract String formatujSelect(String specZapyt);
 
-    public BazaDanych utworzDB(){
-        return new BazaDanych() {
-            @Override
-            public void wykonajSelect() {
-                System.out.println();
-            }
-        };}
+    protected abstract BazaDanych utworzDB();
+
 
 }
