@@ -1,8 +1,8 @@
 package Decorator;
 
-public class Konfiguracja {
+class Konfiguracja {
     Komponent komponent;
-    public Konfiguracja(Komponent komponent) {
+    Konfiguracja(Komponent komponent) {
         this.komponent = komponent;
     }
 
@@ -23,7 +23,7 @@ public class Konfiguracja {
         }
     }
 
-    public Komponent pobierzPotwierdzenie(){
+    Komponent pobierzPotwierdzenie(){
         return this.komponent;
     }
 }

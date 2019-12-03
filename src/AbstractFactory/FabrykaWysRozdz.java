@@ -1,6 +1,7 @@
 package AbstractFactory;
 
 public class FabrykaWysRozdz implements FabrykaSter {
+
     @Override
     public SterownikEkranu pobierzSterEkm() {
         return new SterEkmWysRozdz();

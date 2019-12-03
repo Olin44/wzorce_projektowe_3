@@ -1,7 +1,7 @@
 package FactoryMethod;
 
 public abstract class SzablonZapytania {
-    public String wykonajZapytanie(String nazwaDB, String specZapyt){
+    String wykonajZapytanie(String nazwaDB, String specZapyt){
         String komendaDB;
         BazaDanych BD = utworzDB();
         System.out.println(formatujConnect(nazwaDB));

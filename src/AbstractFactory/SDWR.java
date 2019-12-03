@@ -1,7 +1,8 @@
 package AbstractFactory;
 
-public class SDWR {
-    public void drukuj(){
+class SDWR {
+
+    void drukuj(){
         System.out.println("Drukuję za pomocą drukarki wysokiej jakości");
     }
 }

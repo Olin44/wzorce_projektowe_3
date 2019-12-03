@@ -1,10 +1,12 @@
 package AbstractFactory;
 
-public class Konfiguracja {
-    String nazwa;
-    public Konfiguracja(String nazwa) {
+class Konfiguracja {
+    private String nazwa;
+
+    Konfiguracja(String nazwa) {
         this.nazwa = nazwa;
     }
+
     FabrykaSter getFabryka() throws Exception {
         if(nazwa.equals("NIS")){
             return new FabrykaNisRozdz();

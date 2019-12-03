@@ -1,9 +1,9 @@
 package AbstractFactory;
 
 public class ApNadzorujaca {
-    FabrykaSter fabrykaSter;
+    private FabrykaSter fabrykaSter;
 
-    public ApNadzorujaca(Konfiguracja konfiguracja) throws Exception {
+    ApNadzorujaca(Konfiguracja konfiguracja) throws Exception {
         this.fabrykaSter = konfiguracja.getFabryka();
     }
 
@@ -11,11 +11,11 @@ public class ApNadzorujaca {
         fabrykaSter.pobierzSterDruk().drukuj();
     }
 
-    public void rysuj(){
+    void rysuj(){
         fabrykaSter.pobierzSterEkm().rysuj();
     }
 
-    public void setFabrykaSter(Konfiguracja konfiguracja) throws Exception {
+    void setFabrykaSter(Konfiguracja konfiguracja) throws Exception {
         this.fabrykaSter = konfiguracja.getFabryka();
     }
 }

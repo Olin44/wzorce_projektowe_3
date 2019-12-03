@@ -1,7 +1,8 @@
 package AbstractFactory;
 
-public class SEWR {
-    public void rysuj(){
+class SEWR {
+
+    void rysuj(){
         System.out.println("Rysuję figurę za pomocą sterownika ekranu wysokiej rozdzielczości");
     }
 }

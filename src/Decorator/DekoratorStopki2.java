@@ -1,7 +1,7 @@
 package Decorator;
 
 public class DekoratorStopki2 extends DekoratorPotwierdzenie{
-    public DekoratorStopki2(Komponent komponent) {
+    DekoratorStopki2(Komponent komponent) {
         super(komponent);
     }
 
@@ -11,7 +11,7 @@ public class DekoratorStopki2 extends DekoratorPotwierdzenie{
         drkStopka();
     }
 
-    public void drkStopka(){
+    private void drkStopka(){
         System.out.println("Stopka 2");
     }
 }

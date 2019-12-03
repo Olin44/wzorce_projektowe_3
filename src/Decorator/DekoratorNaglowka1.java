@@ -1,7 +1,7 @@
 package Decorator;
 
 public class DekoratorNaglowka1 extends DekoratorPotwierdzenie{
-    public DekoratorNaglowka1(Komponent komponent) {
+    DekoratorNaglowka1(Komponent komponent) {
         super(komponent);
     }
 
@@ -11,7 +11,7 @@ public class DekoratorNaglowka1 extends DekoratorPotwierdzenie{
         super.drukuj();
     }
 
-    public void drkNaglowka(){
+    private void drkNaglowka(){
         System.out.println("Naglowek 1");
     }
 }
